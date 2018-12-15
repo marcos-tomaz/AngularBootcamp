@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyDx9KsoK9a328HEnvdOiSYcQbg64xIjjLk",
+    apiKey: "",
     authDomain: "bootcamp-vnt-shopping.firebaseapp.com",
     databaseURL: "https://bootcamp-vnt-shopping.firebaseio.com",
     projectId: "bootcamp-vnt-shopping",
