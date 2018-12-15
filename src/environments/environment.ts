@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDx9KsoK9a328HEnvdOiSYcQbg64xIjjLk",
+    authDomain: "bootcamp-vnt-shopping.firebaseapp.com",
+    databaseURL: "https://bootcamp-vnt-shopping.firebaseio.com",
+    projectId: "bootcamp-vnt-shopping",
+    storageBucket: "bootcamp-vnt-shopping.appspot.com",
+    messagingSenderId: "481561882048"
+  }
 };
 
 /*
