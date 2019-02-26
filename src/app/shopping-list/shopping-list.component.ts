@@ -8,11 +8,12 @@ import { ShoppingListService } from '../services/shopping-list.service';
 })
 export class ShoppingListComponent implements OnInit {
 
-  public list = [];
+  public list;
   public itemName = '';
 
   constructor(private shoppingListService: ShoppingListService) {
-   this.shoppingListService.get();
+   this.list = this.shoppingListService.listItemsFirebase;
+  //  this.shoppingListService.get();
   }
 
   ngOnInit() {
@@ -27,15 +28,16 @@ export class ShoppingListComponent implements OnInit {
 
     this.shoppingListService.add(
       addItem
-    ).subscribe(
-      response => {
-        addItem['id'] = response['name'];
-        this.shoppingListService.listItems.push(addItem);
-      },
-      error => {
-        console.log('erro');
-      }
     );
+    // .subscribe(
+    //   response => {
+    //     addItem['id'] = response['name'];
+    //     this.shoppingListService.listItems.push(addItem);
+    //   },
+    //   error => {
+    //     console.log('erro');
+    //   }
+    // );
 
     this.itemName = '';
   }

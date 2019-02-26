@@ -11,6 +11,11 @@ import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component'
 import { AuthService } from "./services/auth.service";
 import { HttpClientModule } from "@angular/common/http"
+import { environment } from 'src/environments/environment';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,10 @@ import { HttpClientModule } from "@angular/common/http"
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [
     ShoppingListService,

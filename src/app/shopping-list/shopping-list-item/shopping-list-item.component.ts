@@ -20,13 +20,14 @@ export class ShoppingListItemComponent implements OnInit {
   }
 
   checkItem(): void{
-    this.shoppingListService.check(this.shoppingItem).subscribe(
-      response => {
-        console.log('Item atualizado com sucesso');
-        this.shoppingItem.checked = true;
-        this.shoppingItem.amout = 0;
-      }
-    );
+    this.shoppingListService.check(this.shoppingItem);
+    // .subscribe(
+    //   response => {
+    //     console.log('Item atualizado com sucesso');
+    //     this.shoppingItem.checked = true;
+    //     this.shoppingItem.amout = 0;
+    //   }
+    // );
   }
 
 }

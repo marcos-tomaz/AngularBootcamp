@@ -1,6 +1,15 @@
-<div class="container-fluid mt-3 jumbotron">
+<div class="container-fluid mt-3">
+  <div *ngIf="authService.angularFirebaseAuth.authState | async as user; else showLogin">
+    <p>Hello {{ user.displayName }}! </p>
+    <button class="btn btn-danger" (click)="logout()">Logout</button>
 
-  <app-header></app-header>
-  <router-outlet></router-outlet>
-
+    <app-header></app-header>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <ng-template #showLogin>
+    <p>Please login.</p>
+    <button class="btn btn-primary" (click)="login()"><i class="fab fa-google"></i>Login with Google</button>
+  </ng-template>
 </div>

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/bootcamp-vnt-shopping",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

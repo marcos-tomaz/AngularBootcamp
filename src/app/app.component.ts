@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Projeto novo';
+
+  constructor(public authService: AuthService) {}
+  
+  login(): void{
+    this.authService.login();
+  }
+
+  logout(): void{
+    this.authService.logout();
+  }
+
 }
